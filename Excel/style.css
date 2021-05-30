@@ -1,24 +1,47 @@
+body {
+    margin: 0;
+     overflow: hidden;   /*This is used to hide scroll-bar */
+     font-size: 14;
+}
+
+* {                             /* Here "*" is used because we have to apply this property for every division */
+    box-sizing: border-box;     /* Border and padding including in screen-size */
+}
+
 .container{
     height: 100vh;
-    border: 2px solid rgb(255, 0, 0);
+    /* border: 2px solid rgb(72, 0, 255); */
 }
+
 .title-bar{
-    height: 5vh;
+    height: 4vh;
+    /* border: 2px solid rgb(72, 0, 255); */
+    background-color: #107c41;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 .menu-bar{
     height: 5vh;
+    /* border: 2px solid rgb(72, 0, 255); */
+    
 }
 
 .menu-icon-bar {
     height: 6vh;
+    /* border: 2px solid rgb(72, 0, 255); */
 }
 
 .formula-bar{
-    height: 6vh;
+    height: 5vh;
+    /* border: 2px solid rgb(72, 0, 255); */
 }
 
 .data-container{
-    height: 74vh;
+    height: 76vh;
+    /* border: 2px solid rgb(72, 0, 255); */
 }
 
 .sheet-bar{
