@@ -17,30 +17,90 @@ body {
     height: 4vh;
     /* border: 2px solid rgb(72, 0, 255); */
     background-color: #107c41;
-    display: flex;
-    flex-direction: row;
+    display: flex;  /* time frame for explanation 28:30*/
+    flex-direction: row;  /* By Default */
     justify-content: center;
     align-items: center;
     color: white;
 }
+
 .menu-bar{
     height: 5vh;
     /* border: 2px solid rgb(72, 0, 255); */
+    background-color: #107c41;
+    display: flex;
     
 }
 
+.menu-item{
+    padding-left: 10px;
+    padding-right: 10px;
+    /* padding-top: 15px; */
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 18;
+}
+
+.menu-item.selected {
+    background-color: #fff;
+    color: #107c41;
+}
+
+.menu-item:hover {
+    background-color: #136a3b;
+    cursor: pointer;
+}
+
+.menu-item.selected:hover {
+    background-color: #fff;
+    cursor: default;
+}
+
 .menu-icon-bar {
-    height: 6vh;
+    height: 5vh;
     /* border: 2px solid rgb(72, 0, 255); */
+    display: flex;
+    align-items: center;
+    background-color: rgb(241, 239, 239);  /* light grey */
+}
+
+
+.menu-icon {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon:hover{
+    background-color: lightgrey;
+    cursor: pointer;
+    
+}
+
+.font-family-selector{
+    width: 170px;
+}
+
+.selector{
+    height: 70%;
+    font-size: 16px;
+}
+
+.selector option {
+    font-size: 16px;
 }
 
 .formula-bar{
     height: 5vh;
     /* border: 2px solid rgb(72, 0, 255); */
+
 }
 
 .data-container{
-    height: 76vh;
+    height: 77h;
     /* border: 2px solid rgb(72, 0, 255); */
 }
 
