@@ -1,0 +1,26 @@
+.container{
+    height: 100vh;
+    border: 2px solid rgb(255, 0, 0);
+}
+.title-bar{
+    height: 5vh;
+}
+.menu-bar{
+    height: 5vh;
+}
+
+.menu-icon-bar {
+    height: 6vh;
+}
+
+.formula-bar{
+    height: 6vh;
+}
+
+.data-container{
+    height: 74vh;
+}
+
+.sheet-bar{
+    height: 4vh;
+}
