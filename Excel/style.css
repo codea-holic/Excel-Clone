@@ -100,10 +100,58 @@ body {
 }
 
 .data-container{
-    height: 77h;
+    height: 77vh;
     /* border: 2px solid rgb(72, 0, 255); */
 }
 
+
+
+
 .sheet-bar{
     height: 4vh;
+    display: flex;
+    align-items: center;
+}
+
+.scroller {
+    width: 70px;
+}
+
+.icon-left-scroll, .icon-right-scroll {
+    font-size: 30px;
+}
+
+.icon-left-scroll:hover, .icon-right-scroll:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+}
+.icon-add {
+    color: #107c41;
+    width: 40px;
+}
+
+.icon-add:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.sheet-tab-container {
+    border: 1px solid lightgrey;
+    width : calc(100vw - 110px);
+}
+
+.sheet-tab {
+    border-bottom: 4px solid #107c41;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    width: 80px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    border-right: 1px solid lightgrey;
+}
+
+.sheet-tab:hover {
+    cursor: default;
 }
