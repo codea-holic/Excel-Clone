@@ -102,10 +102,35 @@ body {
 .data-container{
     height: 77vh;
     /* border: 2px solid rgb(72, 0, 255); */
+    display: flex;
+    flex-wrap: wrap;
 }
 
+.select-all {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
 
+}
 
+.col-name-container {
+    width: calc(100vw - 30px);
+    height: 30px;
+    border: 1px solid red;
+    display: flex;
+}
+
+.row-name-container {
+    width: 30px;
+    height: calc(77vh - 30px);
+    border: 1px solid blue;
+}
+
+.input-cell-container{
+    width: calc(100vw - 30px);
+    height: calc(77vh - 30px);
+    border: 1px solid green;
+}
 
 .sheet-bar{
     height: 4vh;
@@ -155,3 +180,33 @@ body {
 .sheet-tab:hover {
     cursor: default;
 }
+
+.column-name {
+    font-weight: bold;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid lightgrey;
+}
+
+.row-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    height: 25px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.cell-row {
+    display: flex;
+}
+
+.input-cell {
+    width: 100px;
+    height: 25px ;
+    border-right: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+}
+
