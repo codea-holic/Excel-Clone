@@ -121,7 +121,8 @@ body {
 }
 
 .row-name-container {
-    width: 30px;
+    min-width: 30px;
+    overflow: hidden;
     height: calc(77vh - 30px);
     border: 1px solid blue;
 }
@@ -204,8 +205,8 @@ body {
 }
 
 .input-cell {
-    width: 100px;
-    height: 25px ;
+    min-width: 100px;
+    min-height: 25px ;
     border-right: 1px solid lightgrey;
     border-bottom: 1px solid lightgrey;
 }
