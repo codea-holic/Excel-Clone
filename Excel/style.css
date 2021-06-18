@@ -147,6 +147,7 @@ body {
     height: 30px;
     border: 1px solid red;
     display: flex;
+    overflow: hidden;
 }
 
 .row-name-container {
@@ -160,6 +161,7 @@ body {
     width: calc(100vw - 30px);
     height: calc(77vh - 30px);
     border: 1px solid green;
+    overflow: scroll;
 }
 
 .sheet-bar{

@@ -45,4 +45,19 @@ $(document).ready(function () {
         $(".input-cell.selected").removeClass("selected");
         $(this).addClass("selected");
     })
+
+    $(".input-cell").dblclick(function () {
+        $(".input-cell.selected").removeClass("selected");
+        $(this).addClass("selected");
+        $(this).attr("contenteditable", "true");
+        $(this).focus();
+    });
+
+    $(".input-cell-container").scroll(function () {
+        $(".column-name-container").scrollLeft(this.scrollLeft);
+    })
+
+    $(".input-cell-container").scroll(function () {
+        $(".row-name-container").scrollTop(this.scrollTop);
+    })
 });
