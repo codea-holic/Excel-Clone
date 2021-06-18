@@ -1,9 +1,11 @@
 $(document).ready(function () {
-    let cellContainer = $('.input-cell-container');
+    let cellContainer = $(".input-cell-container");
 
     for (let i = 1; i <= 100; i++) {
         let ans = "";
+
         let n = i;
+
         while (n > 0) {
             let rem = n % 26;
             if (rem == 0) {
@@ -35,14 +37,13 @@ $(document).ready(function () {
     $(".align-icon").click(function () {
         $(".align-icon.selected").removeClass("selected");
         $(this).addClass("selected");
-    })
+    });
 
-    $(".style-icon").click(function (){
+    $(".style-icon").click(function () {
         $(this).toggleClass("selected");
-    })
+    });
 
-    $(".input-cell").click(function(e) {
-
+    $(".input-cell").click(function (e) {
         if(e.ctrlKey) {
             let [rowId,colId] = getRowCol(this);
             if(rowId > 1) {
@@ -75,7 +76,6 @@ $(document).ready(function () {
             }
             $(this).addClass("selected");
         }
-
         else {
             $(".input-cell.selected").removeClass("selected");
             $(this).addClass("selected");
@@ -89,18 +89,20 @@ $(document).ready(function () {
         $(this).focus();
     });
 
-    $(".input-cell-container").scroll(function () {
-        $(".column-name-container").scrollLeft(this.scrollLeft);
+    $(".input-cell").blur(function(){
+        $(".input-cell.selected").attr("contenteditable","false");
     })
 
     $(".input-cell-container").scroll(function () {
+        $(".column-name-container").scrollLeft(this.scrollLeft);
         $(".row-name-container").scrollTop(this.scrollTop);
     })
 
-    function getRowCol(ele){
-        let idarray = $(ele).attr("id").split("-");
-        let rowId = parseInt(idarray[1]);
-        let colId = parseInt(idarray[3]);
-        return(rowId, colId);
-    }
+function getRowCol(ele) {
+    let idArray = $(ele).attr("id").split("-");
+    let rowId = parseInt(idArray[1]);
+    let colId = parseInt(idArray[3]);
+    return [rowId,colId];
+}
+
 });
