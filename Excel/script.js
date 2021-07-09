@@ -98,6 +98,8 @@ $(document).ready(function () {
         $(".row-name-container").scrollTop(this.scrollTop);
     })
 
+});
+
 function getRowCol(ele) {
     let idArray = $(ele).attr("id").split("-");
     let rowId = parseInt(idArray[1]);
@@ -105,4 +107,32 @@ function getRowCol(ele) {
     return [rowId,colId];
 }
 
+function updateCell(property,value) {
+    $(".input-cell.selected").each(function() {
+        $(this).css(property,value);
+    })
+}
+
+$(".icon-bold").click(function() {
+    if($(this).hasClass("selected")) {
+        updateCell("font-weight","");
+    } else {
+        updateCell("font-weight","bold");
+    }
+});
+
+$(".icon-italic").click(function() {
+    if($(this).hasClass("selected")) {
+        updateCell("font-style","");
+    } else {
+        updateCell("font-style","italic");
+    }
+});
+
+$(".icon-underline").click(function() {
+    if($(this).hasClass("selected")) {
+        updateCell("text-decoration","");
+    } else {
+        updateCell("text-decoration","underline");
+    }
 });
