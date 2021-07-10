@@ -99,7 +99,23 @@ $(document).ready(function () {
             $(".input-cell.selected").removeClass("selected");
         }
         $(this).addClass("selected");
-    })
+        changeHeader(this);
+    });
+
+    function changeHeader(ele){
+        let [rowId, colId] = getRowCol(ele);
+        let cellInfo = defaultProperties;
+        if(cellData[selectedSheet][rowId] && cellData[selectedSheet][rowId][colId]) {
+            cellInfo = cellData[selectedSheet][rowId][colId];
+        }
+        cellInfo["font-weight"] ? $(".icon-bold").addClass("selected") : $(".icon-bold").removeClass("selected");
+        cellInfo["font-style"] ? $(".icon-italic").addClass("selected") : $(".icon-italic").removeClass("selected");
+        cellInfo["text-decoration"] ? $(".icon-underline").addClass("selected") : $(".icon-underline").removeClass("selected");
+
+        let alignment = cellInfo["text-align"];
+        $(".align-icon.selected").removeClass("selected");
+        $(".icon-align-" + alignment).addClass("selected");
+    }
 
     $(".input-cell").dblclick(function () {
         $(".input-cell.selected").removeClass("selected");
@@ -111,12 +127,12 @@ $(document).ready(function () {
     $(".input-cell").blur(function(){
         $(".input-cell.selected").attr("contenteditable","false");
         updateCell("text", $(this).text());
-    })
+    });
 
     $(".input-cell-container").scroll(function () {
         $(".column-name-container").scrollLeft(this.scrollLeft);
         $(".row-name-container").scrollTop(this.scrollTop);
-    })
+    });
 
 });
 
@@ -179,3 +195,25 @@ $(".icon-underline").click(function() {
         updateCell("text-decoration","underline", false);
     }
 });
+
+$(".icon-align-left").click(function() {
+    if(!$(this).hasClass("selected")){
+       updateCell("text-align","left", true);
+    }
+});
+
+$(".icon-align-center").click(function() {
+    if(!$(this).hasClass("selected")){
+       updateCell("text-align","center", true);
+    }
+});
+
+$(".icon-align-right").click(function() {
+    if(!$(this).hasClass("selected")){
+       updateCell("text-align","right", true);
+    }
+});
+
+/* TODO : Add properties to the icon of font-type and font size */
+
+
