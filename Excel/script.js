@@ -117,6 +117,9 @@ $(document).ready(function () {
         $(".icon-align-" + alignment).addClass("selected");
         $(".background-color-picker").val(cellInfo["background-color"]);
         $(".text-color-picker").val(cellInfo["color"]);
+        $(".font-family-selector").val(cellInfo["font-family"]);
+        $(".font-size-selector").val(cellInfo["font-size"]);
+        $(".font-family-selector").css("font-family", cellInfo["font-family"]);
     }
 
     $(".input-cell").dblclick(function () {
@@ -233,4 +236,11 @@ $(".text-color-picker").change(function(){
     updateCell("color", $(this).val());
 });
 
+$(".font-family-selector").change(function(){
+    updateCell("font-family", $(this).val());
+    $(".font-family-selector").css("font-family", $(this).val());
+});
 
+$(".font-size-selector").change(function(){
+    updateCell("font-size", $(this).val());
+});
