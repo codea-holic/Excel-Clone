@@ -115,6 +115,8 @@ $(document).ready(function () {
         let alignment = cellInfo["text-align"];
         $(".align-icon.selected").removeClass("selected");
         $(".icon-align-" + alignment).addClass("selected");
+        $(".background-color-picker").val(cellInfo["background-color"]);
+        $(".text-color-picker").val(cellInfo["color"]);
     }
 
     $(".input-cell").dblclick(function () {
@@ -214,6 +216,21 @@ $(".icon-align-right").click(function() {
     }
 });
 
-/* TODO : Add properties to the icon of font-type and font size */
+
+$(".color-fill-icon").click(function (){
+    $(".background-color-picker").click();
+});
+
+$(".color-text-icon").click(function (){
+    $(".text-color-picker").click();
+});
+
+$(".background-color-picker").change(function(){
+    updateCell("background-color", $(this).val());
+});
+
+$(".text-color-picker").change(function(){
+    updateCell("color", $(this).val());
+});
 
 
